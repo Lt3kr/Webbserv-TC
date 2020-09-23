@@ -1,0 +1,12 @@
+{
+  "name": "EN_SERVER",
+  "version": "1.0.0",
+  "description": "DEMO",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Liam",
+  "license": "ISC"
+}
