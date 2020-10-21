@@ -6,7 +6,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
 
     console.log("I'm in!")
-    // we're connected!
 });
 
 const messagePostSchema = new mongoose.Schema({
@@ -22,3 +21,4 @@ let newMessagePost = new messagePost({
 })
 
 newMessagePost.save()
+

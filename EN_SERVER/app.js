@@ -22,3 +22,7 @@ app.post('/sendMessage', function (req, res) {
 
   res.redirect('/')
 })
+
+const modul = require("test");
+
+console.log(modul.getName())
