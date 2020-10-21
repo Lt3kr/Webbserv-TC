@@ -1,4 +1,5 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const app = express()
 const port = 7676
 
@@ -18,11 +19,19 @@ app.get('/gibba', (req, res) => {
 
 app.post('/sendMessage', function (req, res) {
     console.log(req.body.name)
-    console.log(req.body.email)
+    console.log(req.body.message)
+    modul.saveData(MessagePost,req.body.name,req.body.message)
 
   res.redirect('/')
-})
+});
 
 const modul = require("test");
 
-console.log(modul.getName())
+mongoose.connect('mongodb://localhost/Webbserver1', { useNewUrlParser: true, useUnifiedTopology: true });
+
+const messagePostSchema = new mongoose.Schema({
+    name: String,
+    message: String
+});
+
+const MessagePost = mongoose.model('MessagePost', messagePostSchema);
